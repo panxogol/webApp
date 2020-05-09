@@ -13,7 +13,11 @@ body {
 }
 
 .container {
-    width: 90%;
+    margin: auto;
+}
+
+.container-95 {
+    width: 95%;
     margin: auto;
 }
 
@@ -21,14 +25,12 @@ body {
 .nav-main {
     font-size: 17px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     height: 60px;
-    padding: 20px 0;
-}
-
-.nav-logo {
-    width: 60px;
+    /* padding-top: 20px;
+    padding-bottom: 20px; */
+    background-color: rgba(0, 0, 0, 40%);
 }
 
 /* NAV-TEXT */
@@ -54,6 +56,85 @@ ul {
 }
 
 .nav-main ul.nav-menu {
-    flex: 1;
-    margin-left: 20px;
+    
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    /* background-color: rgba(0, 0, 0, 40%); */
+}
+
+/* NAV-LOGO */
+.logo-container {
+    display: flex;
+    align-items: center;
+
+}
+
+.nav-logo {
+    width: 60px;
+    cursor: pointer;
+}
+
+.nav-main a.text-logo {
+    color: rgba(245, 245, 245, 80%);
+    padding-left: 10px;
+    cursor: pointer;
+    /* background-color: rgba(0, 0, 0, 40%); */
+}
+
+/* NAV-BURGER */
+.burger div {
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: cornsilk;
+    border-radius: 30%;
+}
+
+.burger {
+    background-color: rgba(0, 0, 0, 40%);
+    border-radius: 25%;
+    padding: 5px 5px;
+    display: none;
+    cursor: pointer;
+}
+
+/* RESPONSIVE-BAR */
+@media screen and (max-width: 915px) {
+    body {
+        /* overflow-x: hidden; */
+    }
+    .nav-menu {
+        /* display: none; */
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 60px;
+        background-color: rgba(0, 0, 0, 40%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 30%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .nav-main ul li {
+        opacity: 0;
+    }
+
+    .burger {
+        display: block;
+    }
+}
+
+/* Class to add when burger is clicked */
+.nav-menu-active {
+    transform: translateX(0%);
+}
+
+@media screen and (max-width: 236px) {
+    .nav-main a.text-logo {
+        display: none;
+    }
 }
