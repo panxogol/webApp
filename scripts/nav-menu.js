@@ -3,17 +3,25 @@ const navSlide = () => {
     const nav = document.querySelector('.nav-menu');
     const navLinks = document.querySelectorAll('.nav-menu li');
     
-    // Toggle Nav
     burguer.addEventListener('click', () => {
+        // Toggle Nav
         nav.classList.toggle('nav-menu-active');
-    });
-    
-    // Animate Links
-    navLinks.forEach((link, index) => {
-        console.log(index / 7 + 1.5);
-        link.style.animation = "navLinkFade 0.5s ease forwards ${index / 5 + 1.5}s";
-    });
+        
+        //Animate Link
+        navLinks.forEach((link, index) => {
+            var delay = index / 5 + 0.6;
+            var animationIn = 'navLinkFade 0.5s ease forwards ' + delay + 's';
+            var animationOut = 'navLinkFadeOut 0.5s';
+            if (link.style.animation) {
+                link.style.animation = animationOut;
+                setTimeout(function(){link.style.animation = '';}, 500);
+            }
 
+            else {
+                link.style.animation = animationIn;
+            }
+        });
+    });
 }
 
 navSlide();
