@@ -101,14 +101,21 @@ ul {
 }
 
 /* RESPONSIVE-BAR */
+@media screen and (min-width: 916px) {
+    .nav-menu li {
+        opacity: 1;
+    }
+}
+
 @media screen and (max-width: 915px) {
     body {
         overflow-x: hidden;
     }
 
-    .nav-menu li {
+    /* .nav-menu li {
         opacity: 0;
-    }
+    } */
+
     .nav-menu {
         /* display: none; */
         position: absolute;
