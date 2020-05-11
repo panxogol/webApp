@@ -101,11 +101,14 @@ ul {
 }
 
 /* RESPONSIVE-BAR */
-@media screen and (min-width: 916px) {
+/* @media screen and (min-width: 916px) {
+    .nav-menu {
+        display: 'flex';
+    }
     .nav-menu li {
         opacity: 1;
     }
-}
+} */
 
 @media screen and (max-width: 915px) {
     body {

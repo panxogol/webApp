@@ -16,11 +16,15 @@ const navSlide = () => {
 
             if (link.style.animation) {
                 link.style.animation = animationOut;
-                setTimeout(function () { link.style.animation = ''; }, 500);
-                link.style.opacity = '1';
+                setTimeout(function () {
+                    link.style.animation = '';
+                    link.style.opacity = '1';
+                    // nav.style.display = 'none';
+                }, 500);
             }
 
             else {
+                // nav.style.display = 'flex';
                 link.style.animation = animationIn;
             }
         });
