@@ -1,0 +1,65 @@
+1. Revisar si está instalado python:
+	si $ python -V
+	>python 2.7.x
+	y $ python3 -V
+	>python 3.6.x
+		2. entonces: instala un virtual enviroment (ambiente virtual) en la carpeta utilizando "virtualenv"
+		3. $ virtualenv -p python3 . (usa esta instruccion con el punto si es el caso anterior)
+			al utilizar el punto ".", se le indica a virtualenv que la carpeta que contiene el ambiente virtual
+			es la carpeta actual.
+			Si se desea crear un nombre del ambiente virtual, se escribe: 
+			$  virtualenv <nombreAmbVirtual> -p python3 (por lo general el nombre es: venv)
+		4 $virtualenv . (Usa esta instruccion si al poner python -V te da resultado una version de python 3.
+
+5. entrar para trabajar en el ambiente virtual: $ source bin/activate
+						si se usa windows: $ .\Scripts\activate
+		para desactivar el ambiente virtual: $ deactivate
+		Al hacer esto, se deben instalar las aplicaciones que se desean utilizar dentro del ambiente virtual.
+
+6. instalar django dentro del ambiente virtual: ve-$ pip install django
+										si se desea instalar una versión específica, se debe reemplazar:
+										django==<version>
+						Para seguir las instrucciones y el tutorial de youtube:
+						https://www.youtube.com/watch?v=F5mRW0jo-U4
+						de freecodecamp.org
+						utilizar versión 2.0.7 => $ pip install django==2.0.7
+
+7. Reconocer el software instalado en el pc o venv: ve-$ pip freeze
+					        >Django==2.0.7
+						>pkg-resources==0.0.0
+						>pytz==2020.1
+
+8. Entrar a Django: ve-$ django-admin
+	Aroojará una lista de subcomandos que se pueden realizar en django
+
+9. Cear un proyecto: ve-$ django-admin startproject <nombre-del-proyecto>
+	Esto creará un proyecto de django. Sin embrgo, el relator decide hacerlo por su cuenta:
+		Crea un directorioi src en el "ve" (virtual enviroment - ambiente virtual):
+		ve-$ mkdir src
+		posteriormente ingresa a este: ve-$ cd src
+		entonces, dentro de la carpeta src utiliza el comndo "startproject":
+		ve->src-$ django-admin startproject <nombre-del-proyecto> (en este caso, utilizó "trydjango")
+			en mi caso utilizaré "WebApp" como nombre de mi proyecto.
+		Una vez dentro de la carpeta, hay un archivo manage.py y una carpeta WebApp
+			Dentro de la carpeta WebApp que esta dentro de la carpeta de Proyecto homonima,
+			se encuentran los siguientes archivos:
+			__init__.py	settings.py	urls.py	wsgi.py 
+
+10. Correr servidor: Para poder correr el servidor, se le debe indicar a python (el que está instalado dentro del ve)
+que haga correr el servidor mediante el archivo: manage.py. Lo cual se hace con el comando:
+	ve>src>WebApp-$ python manage.py runserver
+		Esto empezará a correr un servidor en el pc; entregará una advertenciaque obviaremos inicialmente
+		Se entrega la información relativa lal servidor: en este caso, el servidor corre en:
+		http://127.0.0.1:8000/
+		Para apagar el servidor, se debe presionar ctrl+c en la linea de comandos
+
+11. Ingresar al servidor: entrar al navegar web en la pagina http://127.0.0.1:8000/ o bien
+localhost:8000
+	dentro se encuentra la pagina inicial de administrador de Django 2.0
+
+12. A partir de ahora el resto debe ser realizado en el editor de texto de preferencia
+(en mi caso, usaré Visual Studio Code)
+	guardar proyecto o workspace en la carpeta del proyecto dentro del editor de texto
+
+13.Settings: más expliaciones de settings.py en el video:  https://www.youtube.com/watch?v=F5mRW0jo-U4
+												 
