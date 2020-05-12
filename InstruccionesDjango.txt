@@ -13,6 +13,9 @@
 
 5. entrar para trabajar en el ambiente virtual: $ source bin/activate
 						si se usa windows: $ .\Scripts\activate
+						si no lo permite, entrar al terminal como administrador y usar el siguiente comando:
+						$ Set-ExecutionPolicy Unrestricted -Force
+						despues volver a ejecutar la orden para activar
 		para desactivar el ambiente virtual: $ deactivate
 		Al hacer esto, se deben instalar las aplicaciones que se desean utilizar dentro del ambiente virtual.
 
